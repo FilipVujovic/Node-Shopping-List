@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
+  },
+  "name": "list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/var.env nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}

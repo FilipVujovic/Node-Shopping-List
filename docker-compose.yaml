@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  mongodb:
+    image: 'mongo'
+    container_name: mongo-db
+    env_file:
+      - ./server/config/mongo.env
+    volumes:
+      - data:/data/db
+################################################################
+  server:
+    build: ./server
+    container_name: node-server
+    ports:
+      - '3000:3000'
+    # host_port:container_internal_port
+    env_file:
+      - ./server/config/server.env
+    depends_on:
+      - mongodb
+################################################################
+volumes:
+  data:
